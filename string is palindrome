@@ -1,0 +1,23 @@
+#Check if string is palindrome
+
+# Compare first and last chars, move inward
+word = input("Enter string: ")
+
+left  = 0
+right = len(word) - 1
+is_palindrome = True
+
+while left < right:
+    if word[left] != word[right]:
+        is_palindrome = False
+        break
+    left  = left  + 1
+    right = right - 1
+
+if is_palindrome:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+
+# Input : "madam"  → Palindrome
+# Input : "hello"  → Not Palindrome
