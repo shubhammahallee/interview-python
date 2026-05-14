@@ -1,0 +1,20 @@
+# Trick: reverse whole → reverse first K → reverse rest
+arr = [1, 2, 3, 4, 5]
+k   = 2
+n   = len(arr)
+k   = k % n              # handle k larger than array
+
+def reverse(a, start, end):
+    while start < end:
+        a[start], a[end] = a[end], a[start]
+        start = start + 1
+        end   = end   - 1
+
+reverse(arr, 0, n - 1)    # step 1: reverse whole array
+reverse(arr, 0, k - 1)    # step 2: reverse first k
+reverse(arr, k, n - 1)    # step 3: reverse remaining
+
+print("Rotated:", arr)
+
+# Input : [1, 2, 3, 4, 5], k=2
+# Output: [4, 5, 1, 2, 3]
