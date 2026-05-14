@@ -1,0 +1,30 @@
+#Find first non-repeating character
+
+# Count each char manually, then find first with count 1
+word = input("Enter string: ")
+
+chars  = []
+counts = []
+
+for i in range(len(word)):     # build frequency table
+    found = False
+    for j in range(len(chars)):
+        if chars[j] == word[i]:
+            counts[j] = counts[j] + 1
+            found = True
+            break
+    if not found:
+        chars.append(word[i])
+        counts.append(1)
+
+for i in range(len(word)):     # find first with count 1
+    for j in range(len(chars)):
+        if chars[j] == word[i] and counts[j] == 1:
+            print("First non-repeating:", word[i])
+            break
+    else:
+        continue
+    break
+
+# Input : "swiss"
+# Output: w
