@@ -1,0 +1,28 @@
+#Find duplicate elements in a list
+
+# For each element, count how many times it appears
+ele = list(map(int, input("Enter elements: ").split()))
+
+duplicates = []
+seen = []
+
+for i in range(len(ele)):
+    count = 0
+
+    for j in range(len(ele)):   # count occurrences
+        if ele[i] == ele[j]:
+            count = count + 1
+
+    already_added = False
+    for s in seen:              # skip if already recorded
+        if s == ele[i]:
+            already_added = True
+
+    if count > 1 and not already_added:
+        duplicates.append(ele[i])
+        seen.append(ele[i])
+
+print("Duplicates:", duplicates)
+
+# Input : 1 2 3 2 4 3
+# Output: [2, 3]
