@@ -1,0 +1,26 @@
+#Find frequency of characters in string
+
+# Manually build a frequency table using two lists
+word = input("Enter string: ")
+
+chars  = []    # stores unique characters
+counts = []    # stores their counts
+
+for i in range(len(word)):
+    found = False
+
+    for j in range(len(chars)):
+        if chars[j] == word[i]:       # already seen this char
+            counts[j] = counts[j] + 1
+            found = True
+            break
+
+    if not found:                     # new character
+        chars.append(word[i])
+        counts.append(1)
+
+for i in range(len(chars)):
+    print(chars[i], ":", counts[i])
+
+# Input : "hello"
+# Output: h:1  e:1  l:2  o:1
