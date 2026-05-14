@@ -1,0 +1,16 @@
+#Reverse a string without using slicing
+
+# Start from last index, walk backwards
+word = input("Enter string: ")
+
+rev = ""
+i = len(word) - 1          # last index
+
+while i >= 0:
+    rev = rev + word[i]     # add char one by one
+    i = i - 1
+
+print("Reversed:", rev)
+
+# Input : "hello"
+# Output: "olleh"
