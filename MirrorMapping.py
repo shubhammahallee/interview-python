@@ -7,6 +7,12 @@ alpha = 'abcdefghijklmnopqrstuvwxyz'
 reverse = alpha[::-1]
 dict1 = dict(zip(alpha,reverse))
 
+prefix = input_string[0:n-1]
+suffix = input_string[n-1:]
+
+
+
+
 
 
 
