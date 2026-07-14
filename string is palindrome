@@ -1,4 +1,4 @@
-#Check if string is palindrome
+#Check if string is palindrome 
 
 # Compare first and last chars, move inward
 word = input("Enter string: ")
