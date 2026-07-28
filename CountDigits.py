@@ -1,5 +1,5 @@
 num = 12
-temp = num
+temp = num 
 count = 0
 if num == 0:
     count = 1
