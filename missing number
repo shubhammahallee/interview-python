@@ -2,7 +2,7 @@
 
 # Use the formula: sum(1..N) - actual_sum = missing
 arr = [1, 2, 4, 5, 6]   # 3 is missing
-n = len(arr) + 1           # total numbers should be n
+n = len(arr) + 1           # total numbers should be n 
 
 expected_sum = n * (n + 1) // 2  # formula, no loop needed
 
