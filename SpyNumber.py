@@ -9,7 +9,8 @@ while temp > 0:
     pro *= digit
     temp //= 10
 
+
 if sum == pro:
     print("Spy Number")
 else:
-    print("Not Spy Number")
+    print("Not Spy Number") 
